@@ -17,7 +17,7 @@
 		</h3>
 		<h2>Result:</h2>
 		<h3>GT different top group visualization:</h3>
-		<table border=0 cellspacing=0 cellpadding=0>
+		<table border=1 cellspacing=0 cellpadding=0>
 			<tr>
 				<td>top group</td>
 				<td>0~0.001</td>
@@ -41,7 +41,7 @@
 			</tr>
 		</table>
 		<h3>GT static result(Log yscale):</h3>
-		<table border=0 cellspacing=0 cellpadding=0>
+		<table border=1 cellspacing=0 cellpadding=0>
 			<tr>	
 				<td><img src="./20200825/without_noise/MazdaMPV/gt_static.png" alt="img", width="1000"></td>
 			</tr>
@@ -55,7 +55,7 @@
 			<br>Based on previous conclusion, following static step will focus on data on the top 0.1. 		
 		</h2>
 		<h3>SDVRG result:</h3>
-		<table border=0 cellspacing=0 cellpadding=0>
+		<table border=1 cellspacing=0 cellpadding=0>
 			<tr>
 				<td>Data Groups</td>
 				<td>without noise</td>
@@ -69,7 +69,7 @@
 				<td><img src="./20200825/rayleigh_5/MazdaMPV/SDVRG.png" alt="img", width='600'></td>
 			</tr>
 			<tr>
-				<td>oyotaTacoma</td>
+				<td>ToyotaTacoma</td>
 				<td><img src="./20200825/without_noise/ToyotaTacoma/SDVRG.png" alt="img", width='600'></td>
 				<td><img src="./20200825/rayleigh_5/ToyotaTacoma/SDVRG.png" alt="img", width='600'></td>
 				<td><img src="./20200825/rayleigh_5/ToyotaTacoma/SDVRG.png" alt="img", width='600'></td>
@@ -83,6 +83,92 @@
 			still visible on visualization result.
 			<br>Moreover, not all result are small. There are still some prediction data bigger than gt data, 
 			which also play an important role on visualization part.  
+		</h2>
+		
+		<h2>relative prediction and image result:(rlt_delta = abs(pred - gt)/ (gt + epsilon)), (rlt_image = abs(image - gt)/ (gt + epsilon))</h2>
+		<h3>without noise</h3>
+		<table border=1 cellspacing=0 cellpadding=0>
+			<tr>
+				<td>groups</td>
+				<td>rlt_delta >=1</td>
+				<td>rlt_image >=1</td>
+				<td>rlt_delta >=10</td>
+				<td>rlt_image >=10</td>
+			</tr>
+			<tr>
+				<td>MazdaMPV</td>
+				<td><img src="./20200825/without_noise/MazdaMPV/rlt_delta-vmax1.png" alt="img"></td>
+				<td><img src="./20200825/without_noise/MazdaMPV/rlt_image-vmax1.png" alt="img"></td>
+				<td><img src="./20200825/without_noise/MazdaMPV/rlt_delta-vmax10.png" alt="img"></td>
+				<td><img src="./20200825/without_noise/MazdaMPV/rlt_image-vmax10.png" alt="img"></td>
+
+			</tr>
+			<tr>
+				<td>ToyotaTacoma</td>
+				<td><img src="./20200825/without_noise/ToyotaTacoma/rlt_delta-vmax1.png" alt="img"></td>
+				<td><img src="./20200825/without_noise/ToyotaTacoma/rlt_image-vmax1.png" alt="img"></td>
+				<td><img src="./20200825/without_noise/ToyotaTacoma/rlt_delta-vmax10.png" alt="img"></td>
+				<td><img src="./20200825/without_noise/ToyotaTacoma/rlt_image-vmax10.png" alt="img"></td>
+			</tr>
+		</table>
+		
+		<h3>Rayleigh 5</h3>
+		<table border=1 cellspacing=0 cellpadding=0>
+			<tr>
+				<td>groups</td>
+				<td>prd/gt >=1</td>
+				<td>img/gt >=1</td>
+				<td>prd/gt >=10</td>
+				<td>img/gt >=10</td>
+			</tr>
+			<tr>
+				<td>MazdaMPV</td>
+				<td><img src="./20200825/rayleigh_5/MazdaMPV/rlt_delta-vmax1.png" alt="img"></td>
+				<td><img src="./20200825/rayleigh_5/MazdaMPV/rlt_image-vmax1.png" alt="img"></td>
+				<td><img src="./20200825/rayleigh_5/MazdaMPV/rlt_delta-vmax10.png" alt="img"></td>
+				<td><img src="./20200825/rayleigh_5/MazdaMPV/rlt_image-vmax10.png" alt="img"></td>
+
+			</tr>
+			<tr>
+				<td>ToyotaTacoma</td>
+				<td><img src="./20200825/rayleigh_5/ToyotaTacoma/rlt_delta-vmax1.png" alt="img"></td>
+				<td><img src="./20200825/rayleigh_5/ToyotaTacoma/rlt_image-vmax1.png" alt="img"></td>
+				<td><img src="./20200825/rayleigh_5/ToyotaTacoma/rlt_delta-vmax10.png" alt="img"></td>
+				<td><img src="./20200825/rayleigh_5/ToyotaTacoma/rlt_image-vmax10.png" alt="img"></td>
+			</tr>
+		</table>
+		
+		<h3>Rayleigh 10</h3>
+		<table border=1 cellspacing=0 cellpadding=0>
+			<tr>
+				<td>groups</td>
+				<td>prd/gt >=1</td>
+				<td>img/gt >=1</td>
+				<td>prd/gt >=10</td>
+				<td>img/gt >=10</td>
+			</tr>
+			<tr>
+				<td>MazdaMPV</td>
+				<td><img src="./20200825/rayleigh_10/MazdaMPV/rlt_delta-vmax1.png" alt="img"></td>
+				<td><img src="./20200825/rayleigh_10/MazdaMPV/rlt_image-vmax1.png" alt="img"></td>
+				<td><img src="./20200825/rayleigh_10/MazdaMPV/rlt_delta-vmax10.png" alt="img"></td>
+				<td><img src="./20200825/rayleigh_10/MazdaMPV/rlt_image-vmax10.png" alt="img"></td>
+
+			</tr>
+			<tr>
+				<td>ToyotaTacoma</td>
+				<td><img src="./20200825/rayleigh_10/ToyotaTacoma/rlt_delta-vmax1.png" alt="img"></td>
+				<td><img src="./20200825/rayleigh_10/ToyotaTacoma/rlt_image-vmax1.png" alt="img"></td>
+				<td><img src="./20200825/rayleigh_10/ToyotaTacoma/rlt_delta-vmax10.png" alt="img"></td>
+				<td><img src="./20200825/rayleigh_10/ToyotaTacoma/rlt_image-vmax10.png" alt="img"></td>
+			</tr>
+		</table>
+		<h2>Analysis:
+			<br>From above results, the relative error between prediction and image are visible.
+			<br>Generally, relative error of prediction over 1 and 10 both almost concentrate on surface of cars, regardless of car type.
+			<br>However, relative error of image over 1 and 10 can both be seen over the entire space, not only on surface of car.
+			<br>In conclusion, the network does improve the image data and dig out more useful information from training data and use the information
+			to reconstruct given blur data. 
 		</h2>
 
 	
@@ -104,7 +190,7 @@
 		<!-- without noise -->
 		<h3>without noise:</h3>
 		<img src="./20200824/without_noise/loss_iter_chart.png" alt="loss", width="1000">
-		<table border=0 cellspacing=0 cellpadding=0>
+		<table border=1 cellspacing=0 cellpadding=0>
 			<tr>
 				<td>image</td>
 				<td>pred</td>
@@ -136,7 +222,7 @@
 		<!-- rayleigh snr 5 -->
 		<h3>rayleigh 5:</h3>
 		<img src="./20200824/rayleigh_5/loss_iter_chart.png" alt="loss", width="1000">
-		<table border=0 cellspacing=0 cellpadding=0>
+		<table border=1 cellspacing=0 cellpadding=0>
 			<tr>
 				<td>image</td>
 				<td>pred</td>
@@ -164,7 +250,7 @@
 		<!-- rayleigh snr 10 -->
 		<h3>rayleigh 10:</h3>
 		<img src="./20200824/rayleigh_10/loss_iter_chart.png" alt="loss", width="1000">
-		<table border=0 cellspacing=0 cellpadding=0>
+		<table border=1 cellspacing=0 cellpadding=0>
 			<tr>
 				<td>image</td>
 				<td>pred</td>
